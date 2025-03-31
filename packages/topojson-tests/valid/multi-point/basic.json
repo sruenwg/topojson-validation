@@ -1,0 +1,13 @@
+{
+  "type": "MultiPoint",
+  "id": "some-multi-point",
+  "properties": {
+    "numProp": 3.14,
+    "strProp": "3.14"
+  },
+  "coordinates": [
+    [0.2,-0.2],
+    [-0.5,1],
+    [0,1]
+  ]
+}

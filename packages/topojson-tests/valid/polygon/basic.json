@@ -1,0 +1,11 @@
+{
+  "type": "Polygon",
+  "id": "some-polygon",
+  "properties": {
+    "numProp": 3.14,
+    "strProp": "3.14"
+  },
+  "arcs": [
+    [1]
+  ]
+}

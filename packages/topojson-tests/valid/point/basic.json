@@ -1,0 +1,9 @@
+{
+  "type": "Point",
+  "id": "some-point",
+  "properties": {
+    "numProp": 3.14,
+    "strProp": "3.14"
+  },
+  "coordinates": [1.414, -10.10, 99]
+}

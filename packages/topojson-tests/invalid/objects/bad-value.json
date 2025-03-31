@@ -1,0 +1,9 @@
+{
+  "some-point": {
+    "type": "Point",
+    "coordinates": [0,0]
+  },
+  "invalid-point": {
+    "type": "Point"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "GeometryCollection",
+  "id": "some-geometry-collection",
+  "properties": {
+    "numProp": 3.14,
+    "strProp": "3.14"
+  },
+  "geometries": [
+    {
+      "type": "Point",
+      "coordinates": [-1, 1]
+    },
+    {
+      "type": "Point",
+      "coordinates": [1,1]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+export { default as fourPositionMultiArcLinearRingQuantized } from './4-position-multi-arc-linear-ring-quantized.json';
+export { default as fourPositionMultiArcLinearRingUnquantized } from './4-position-multi-arc-linear-ring-unquantized.json';
+export { default as fourPositionSingleArcLinearRingQuantized } from './4-position-single-arc-linear-ring-quantized.json';
+export { default as fourPositionSingleArcLinearRingUnquantized } from './4-position-single-arc-linear-ring-unquantized.json';
+export { default as additionalMembers } from './additional-members.json'
+export { default as basic } from './basic.json';
+export { default as minimal } from './minimal.json';
+export { default as negativeArcIndexQuantized } from './negative-arc-index-quantized.json';
+export { default as negativeArcIndexUnquantized } from './negative-arc-index-unquantized.json';
+export { default as unquantizedWithFloat } from './unquantized-with-float.json';

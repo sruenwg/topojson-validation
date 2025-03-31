@@ -1,0 +1,21 @@
+{
+  "name": "topojson-schema",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run ./src/index.ts",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@hyperjump/json-schema": "^1.11.0",
+    "@types/bun": "^1.2.8",
+    "bun": "^1.2.8",
+    "topojson-tests": "workspace:*",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}

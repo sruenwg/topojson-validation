@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "lib": ["ESNext", "ESNext.Intl", "DOM"],
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "outDir": "./dist",
+    "strict": true,
+    "target": "ES6",
+  },
+  "include": [
+    "./src/**/*.ts",
+  ],
+  "exclude": [
+    "./src/**/*.test.ts",
+  ],
+}

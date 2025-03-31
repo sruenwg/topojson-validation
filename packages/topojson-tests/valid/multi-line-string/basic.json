@@ -1,0 +1,12 @@
+{
+  "type": "MultiLineString",
+  "id": "some-multi-line-string",
+  "properties": {
+    "numProp": 3.14,
+    "strProp": "3.14"
+  },
+  "arcs": [
+    [0,-2,3],
+    [2]
+  ]
+}

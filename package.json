@@ -1,0 +1,5 @@
+{
+  "name": "topojson-validation",
+  "private": true,
+  "workspaces": ["packages/*"]
+}

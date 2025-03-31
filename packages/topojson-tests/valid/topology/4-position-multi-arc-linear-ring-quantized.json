@@ -1,0 +1,26 @@
+{
+  "type": "Topology",
+  "arcs": [
+    [
+      [1,0],
+      [0,1]
+    ],
+    [
+      [1,1],
+      [0,-1],
+      [0,0]
+    ]
+  ],
+  "objects": {
+    "hexagon": {
+      "type": "Polygon",
+      "arcs": [
+        [0,1]
+      ]
+    }
+  },
+  "transform": {
+    "scale": [1,0.5],
+    "translate": [0,1]
+  }
+}

@@ -1,0 +1,11 @@
+export { default as threePositionMultiArcLinearRingQuantized } from './3-position-multi-arc-linear-ring-quantized.json';
+export { default as threePositionSingleArcLinearRingQuantized } from './3-position-single-arc-linear-ring-quantized.json';
+export { default as threePositionMultiArcLinearRingUnquantized } from './3-position-multi-arc-linear-ring-unquantized.json';
+export { default as threePositionSingleArcLinearRingUnquantized } from './3-position-single-arc-linear-ring-unquantized.json';
+export { default as noArcs } from './no-arcs.json';
+export { default as noObjects } from './no-objects.json';
+export { default as noType } from './no-type.json';
+export { default as oobArcIndexNegative } from './oob-arc-index-negative.json';
+export { default as oobArcIndexPositive } from './oob-arc-index-positive.json';
+export { default as quantizedWithFloat } from './quantized-with-float.json';
+export { default as unclosedLinearRing } from './unclosed-linear-ring.json';

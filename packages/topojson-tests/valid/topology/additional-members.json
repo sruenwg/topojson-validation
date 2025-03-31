@@ -1,0 +1,9 @@
+{
+  "type": "Topology",
+  "arcs": [],
+  "objects": {},
+  "foo": "bar",
+  "1": {
+    "one": [1, null]
+  }
+}
