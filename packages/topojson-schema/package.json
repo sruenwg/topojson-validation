@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "exports": {
+    "./draft-07": "./dist/schemas/draft-07/index.js"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "bun run ./src/index.ts",
+    "build": "bun run ./build/generate-schemas.ts && bun run ./build/generate-exports.ts",
     "test": "vitest"
   },
   "devDependencies": {

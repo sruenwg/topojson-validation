@@ -28,6 +28,7 @@ export function createJsonSchema(
         .sort(([a], [b]) => a < b ? -1 : 1);
       return {
         $schema: 'http://json-schema.org/draft-07/schema#',
+        title: id,
         ...schema,
         ...(context.definitions.size > 0
           ? { definitions: Object.fromEntries(definitions) }
