@@ -1,4 +1,4 @@
-name: Test topojson-valibot
+name: CI for topojson-valibot
 
 on:
   pull_request:

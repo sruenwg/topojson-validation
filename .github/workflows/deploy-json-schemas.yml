@@ -1,11 +1,13 @@
 name: Deploy JSON Schemas to GitHub Pages
 
 on:
-  push:
+  workflow_run:
+    workflows:
+      - CI for topojson-schema
+    types:
+      - completed
     branches:
       - main
-    paths:
-      - packages/topojson-schema
   workflow_dispatch:
 
 permissions:
@@ -15,6 +17,9 @@ permissions:
 
 jobs:
   build:
+    if: |
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,9 +32,6 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install dependencies
         run: bun install
-      - name: Build topojson-valibot
-        working-directory: ./packages/topojson-valibot
-        run: bun run build
       - name: Build topojson-schema
         working-directory: ./packages/topojson-schema
         run: bun run build

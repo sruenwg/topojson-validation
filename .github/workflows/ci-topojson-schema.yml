@@ -1,4 +1,4 @@
-name: Test topojson-schema
+name: CI for topojson-schema
 
 on:
   pull_request:
