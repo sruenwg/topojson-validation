@@ -13,15 +13,25 @@ Where the specification is unclear, as a general principle, this project tries t
 
 ## Limitations
 
-- While schemas are exposed for individual TopoJSON parts, some of these constituent parts depend on other parts of the topology and thus may become invalid when placed within a topology. For instance, a polygon with `arcs: [[3,4]]` may be marked as valid if validated against a polygon schema, but an error would be flagged if the polygon were validated against a topology schema as part of a topology containing only 4 arcs (since arc index 4 would be out of bounds).
+While this project provides schemas for individual parts of the TopoJSON format (e.g. not just the Topology but also Bbox, Transform, etc.), some of these constituent parts depend on other parts of the topology and thus may become invalid within the context of a whole topology. For instance, a polygon with `arcs: [[3,4]]` may be marked as valid if validated against a polygon schema, but an error would be flagged if the polygon were validated against a topology schema as part of a topology containing only 4 arcs (since arc index 4 would be out of bounds).
 
-- Schemas do not check ring order in polygons/multipolygons, i.e. whether the first ring in an array of linear rings is indeed the outer ring and all subsequent rings are inner rings/holes. (This may change in the future as this should be computable.)
+See individual packages for package-specific limitations.
 
-- Schemas do not check whether the bbox coordinates actually match the bounds of the contained geometries. This is because quantization may introduce slight errors to the geometries' coordinate values.
 
-- Schemas do not check whether the number of bbox dimensions matches the number of geometry dimensions. This is to prevent any issues with TopoJSONs generated using the reference implementation `topojson-server`, which as of v3.0.1 retains the z dimension in the output TopoJSON object while producing only x and y values in the corresponding bbox (see [issue](https://github.com/topojson/topojson-server/issues/5)).
+## To develop
 
-- Several more cases are not handled by `topojson-schema` due to the limited ability of JSON Schemas in performing complex checks. See `topojson-schema/test` for the list of checks that are skipped.
+This project uses [Bun workspaces](https://bun.sh/docs/install/workspaces).
+```
+# Install dependencies at top level
+cd topojson-validation
+bun install
+
+# Develop
+cd topojson-schema
+... # Make changes
+bun run build
+bun run test
+```
 
 
 ## Acknowledgements

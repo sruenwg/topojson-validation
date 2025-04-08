@@ -7,6 +7,6 @@ Similar to [geojson-schema](https://github.com/geojson/schema), self-complete sc
 
 ## Limitations
 
-Some requirements of the TopoJSON specification are not fully validated by these schemas.
+Some requirements of the TopoJSON specification are not fully validated by these schemas, in part due to the difficulty of performing complex validation via JSON Schema.
 
-More details [here](https://github.com/sruenwg/topojson-validation#limitations).
+See the tests in the `test` folder (alongside the [`topojson-tests`](https://github.com/sruenwg/topojson-validation/tree/main/packages/topojson-tests) package which the tests rely on) for details on what cases are/aren't handled.
