@@ -41,14 +41,14 @@ const testInfos = [
   testInfo('transform', []),
 ];
 
-function capitalizeFirstLetter(str: string) {
-  return `${str[0].toUpperCase()}${str.slice(1)}`;
+function convertCamelToKebabCase(str: string) {
+  return str.replaceAll(/([A-Z])/g, '-$1').toLowerCase();
 }
 
 for (const { testJsonsKey, unhandledCases } of testInfos) {
   describe(testJsonsKey, async () => {
     const jsonSchemaPath = `./dist/schemas/draft-07/` +
-      `${capitalizeFirstLetter(testJsonsKey)}.schema.json`;
+      `${convertCamelToKebabCase(testJsonsKey)}.schema.json`;
     const validateJson = await validate(jsonSchemaPath);
 
     for (const [key, val] of Object.entries(jsons.valid[testJsonsKey])) {
