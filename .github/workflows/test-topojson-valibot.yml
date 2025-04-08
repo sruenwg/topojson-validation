@@ -5,6 +5,12 @@ on:
     paths:
       - packages/topojson-tests
       - packages/topojson-valibot
+  push:
+    branches:
+      - main
+    paths:
+      - packages/topojson-tests
+      - packages/topojson-valibot
 
 jobs:
   test:
