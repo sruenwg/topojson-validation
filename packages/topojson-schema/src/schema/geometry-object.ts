@@ -8,6 +8,7 @@ import { NullObject } from './null-object';
 import { Point } from './point';
 import { Polygon } from './polygon';
 
+// 2.2. Geometry Objects
 export const GeometryObject = createJsonSchema('GeometryObject', (context) => ({
   oneOf: [
     Point(context),

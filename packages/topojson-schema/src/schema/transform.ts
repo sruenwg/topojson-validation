@@ -1,5 +1,6 @@
 import { createJsonSchema } from '../utils';
 
+// 2.1.2. Transforms
 export const Transform = createJsonSchema('Transform', () => ({
   type: 'object',
   properties: {

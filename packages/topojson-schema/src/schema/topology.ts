@@ -4,6 +4,7 @@ import { Bbox } from './bbox';
 import { Objects } from './objects';
 import { Transform } from './transform';
 
+// 2.1. Topology Objects
 export const Topology = createJsonSchema('Topology', (context) => ({
   type: 'object',
   properties: {
