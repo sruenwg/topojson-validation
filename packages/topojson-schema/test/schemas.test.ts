@@ -1,6 +1,6 @@
 import { validator } from '@exodus/schemasafe';
 // @ts-expect-error
-import * as jsons from 'topojson-tests';
+import * as jsons from '@sruenwg/topojson-tests';
 import { describe, expect, it } from 'vitest';
 import type { Json } from '../src/types';
 

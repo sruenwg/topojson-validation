@@ -22,7 +22,7 @@ Tests for some of the more complex TopoJSON requirements are not included (yet),
 The intended use is for these tests to help check the correctness of a validator implementation.
 
 ```ts
-import * as tests from 'topojson-tests';
+import * as tests from '@sruenwg/topojson-tests';
 
 for (const validTopology of Object.values(tests.valid.topology)) {
   const isTopology = myTopologyValidator.parse(validTopology);

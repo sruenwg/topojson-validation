@@ -5,29 +5,29 @@
       "name": "topojson-validation",
     },
     "packages/topojson-schema": {
-      "name": "topojson-schema",
+      "name": "@sruenwg/topojson-schema",
       "version": "0.1.0",
       "devDependencies": {
         "@exodus/schemasafe": "^1.3.0",
+        "@sruenwg/topojson-tests": "workspace:*",
         "@types/bun": "^1.2.8",
         "bun": "^1.2.8",
-        "topojson-tests": "workspace:*",
         "typescript": "^5.8.2",
         "vitest": "^3.0.9",
       },
     },
     "packages/topojson-tests": {
-      "name": "topojson-tests",
+      "name": "@sruenwg/topojson-tests",
       "version": "0.1.0",
     },
     "packages/topojson-valibot": {
-      "name": "topojson-valibot",
+      "name": "@sruenwg/topojson-valibot",
       "version": "0.1.0",
       "dependencies": {
         "valibot": "^1.0.0",
       },
       "devDependencies": {
-        "topojson-tests": "workspace:*",
+        "@sruenwg/topojson-tests": "workspace:*",
         "typescript": "^5.8.2",
         "vitest": "^3.0.9",
       },
@@ -150,6 +150,12 @@
 
     "@rollup/rollup-win32-x64-msvc": ["@rollup/rollup-win32-x64-msvc@4.37.0", "", { "os": "win32", "cpu": "x64" }, "sha512-LWbXUBwn/bcLx2sSsqy7pK5o+Nr+VCoRoAohfJ5C/aBio9nfJmGQqHAhU6pwxV/RmyTk5AqdySma7uwWGlmeuA=="],
 
+    "@sruenwg/topojson-schema": ["@sruenwg/topojson-schema@workspace:packages/topojson-schema"],
+
+    "@sruenwg/topojson-tests": ["@sruenwg/topojson-tests@workspace:packages/topojson-tests"],
+
+    "@sruenwg/topojson-valibot": ["@sruenwg/topojson-valibot@workspace:packages/topojson-valibot"],
+
     "@types/bun": ["@types/bun@1.2.8", "", { "dependencies": { "bun-types": "1.2.7" } }, "sha512-t8L1RvJVUghW5V+M/fL3Thbxcs0HwNsXsnTEBEfEVqGteiJToOlZ/fyOEaR1kZsNqnu+3XA4RI/qmnX4w6+S+w=="],
 
     "@types/estree": ["@types/estree@1.0.6", "", {}, "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="],
@@ -233,12 +239,6 @@
     "tinyrainbow": ["tinyrainbow@2.0.0", "", {}, "sha512-op4nsTR47R6p0vMUUoYl/a+ljLFVtlfaXkLQmqfLR1qHma1h/ysYk4hEXZ880bf2CYgTskvTa/e196Vd5dDQXw=="],
 
     "tinyspy": ["tinyspy@3.0.2", "", {}, "sha512-n1cw8k1k0x4pgA2+9XrOkFydTerNcJ1zWCO5Nn9scWHTD+5tp8dghT2x1uduQePZTZgd3Tupf+x9BxJjeJi77Q=="],
-
-    "topojson-schema": ["topojson-schema@workspace:packages/topojson-schema"],
-
-    "topojson-tests": ["topojson-tests@workspace:packages/topojson-tests"],
-
-    "topojson-valibot": ["topojson-valibot@workspace:packages/topojson-valibot"],
 
     "typescript": ["typescript@5.8.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ=="],
 

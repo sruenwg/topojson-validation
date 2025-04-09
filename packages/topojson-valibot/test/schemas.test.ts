@@ -1,4 +1,4 @@
-import * as jsons from 'topojson-tests';
+import * as jsons from '@sruenwg/topojson-tests';
 import * as v from 'valibot';
 import { describe, expect, it } from 'vitest';
 import {
