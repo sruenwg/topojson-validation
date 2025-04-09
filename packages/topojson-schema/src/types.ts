@@ -1,6 +1,10 @@
-import type { Schema } from '@exodus/schemasafe';
+import type {
+  Json as SchemaSafeJson,
+  Schema as SchemaSafeSchema,
+} from '@exodus/schemasafe';
 
-export type JsonSchema = Exclude<Schema, boolean>;
+export type Json = SchemaSafeJson;
+export type JsonSchema = Exclude<SchemaSafeSchema, boolean>;
 
 export interface SchemaContext {
   root?: string;

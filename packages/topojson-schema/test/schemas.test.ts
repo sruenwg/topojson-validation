@@ -1,6 +1,8 @@
 import { validator } from '@exodus/schemasafe';
+// @ts-expect-error
 import * as jsons from 'topojson-tests';
 import { describe, expect, it } from 'vitest';
+import type { Json } from '../src/types';
 
 interface TestInfo<T extends keyof typeof jsons.invalid> {
   testJsonsKey: T;
@@ -54,13 +56,13 @@ for (const { testJsonsKey, unhandledCases } of testInfos) {
 
     for (const [key, val] of Object.entries(jsons.valid[testJsonsKey])) {
       it(`should successfully parse valid ${testJsonsKey}: ${key}`, () => {
-        expect(validateJson(val)).toBe(true);
+        expect(validateJson(val as Json)).toBe(true);
       });
     }
     for (const [key, val] of Object.entries(jsons.invalid[testJsonsKey])) {
       if (!(unhandledCases as string[]).includes(key)) {
         it(`should fail to parse invalid ${testJsonsKey}: ${key}`, () => {
-          expect(validateJson(val)).toBe(false);
+          expect(validateJson(val as Json)).toBe(false);
         });
       }
     }

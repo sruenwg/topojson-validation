@@ -1,5 +1,3 @@
-import { nullObject } from '../valid';
-
 export * as arcIndexes from './arc-indexes';
 export * as arcs from './arcs';
 export * as bbox from './bbox';
