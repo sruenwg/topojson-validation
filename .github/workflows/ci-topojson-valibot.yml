@@ -3,14 +3,14 @@ name: CI for topojson-valibot
 on:
   pull_request:
     paths:
-      - packages/topojson-tests
-      - packages/topojson-valibot
+      - packages/topojson-tests/**
+      - packages/topojson-valibot/**
   push:
     branches:
       - main
     paths:
-      - packages/topojson-tests
-      - packages/topojson-valibot
+      - packages/topojson-tests/**
+      - packages/topojson-valibot/**
   workflow_dispatch:
 
 jobs:

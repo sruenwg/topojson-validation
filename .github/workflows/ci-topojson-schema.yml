@@ -3,14 +3,14 @@ name: CI for topojson-schema
 on:
   pull_request:
     paths:
-      - packages/topojson-tests
-      - packages/topojson-schema
+      - packages/topojson-tests/**
+      - packages/topojson-schema/**
   push:
     branches:
       - main
     paths:
-      - packages/topojson-tests
-      - packages/topojson-schema
+      - packages/topojson-tests/**
+      - packages/topojson-schema/**
   workflow_dispatch:
 
 jobs:
