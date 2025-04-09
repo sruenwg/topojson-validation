@@ -1,4 +1,4 @@
-import { validate } from '@hyperjump/json-schema/draft-07';
+import { validator } from '@exodus/schemasafe';
 import * as jsons from 'topojson-tests';
 import { describe, expect, it } from 'vitest';
 
@@ -41,25 +41,26 @@ const testInfos = [
   testInfo('transform', []),
 ];
 
-function convertCamelToKebabCase(str: string) {
-  return str.replaceAll(/([A-Z])/g, '-$1').toLowerCase();
+function capitalizeFirstLetter(str: string) {
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 
 for (const { testJsonsKey, unhandledCases } of testInfos) {
   describe(testJsonsKey, async () => {
-    const jsonSchemaPath = `./dist/schemas/draft-07/` +
-      `${convertCamelToKebabCase(testJsonsKey)}.schema.json`;
-    const validateJson = await validate(jsonSchemaPath);
+    const jsonSchemaPath = './dist/schemas/draft-07/'
+      + `${capitalizeFirstLetter(testJsonsKey)}.json`;
+    const jsonSchema = (await import(jsonSchemaPath)).default;
+    const validateJson = validator(jsonSchema);
 
     for (const [key, val] of Object.entries(jsons.valid[testJsonsKey])) {
       it(`should successfully parse valid ${testJsonsKey}: ${key}`, () => {
-        expect(validateJson(val).valid).toBe(true);
+        expect(validateJson(val)).toBe(true);
       });
     }
     for (const [key, val] of Object.entries(jsons.invalid[testJsonsKey])) {
       if (!(unhandledCases as string[]).includes(key)) {
         it(`should fail to parse invalid ${testJsonsKey}: ${key}`, () => {
-          expect(validateJson(val).valid).toBe(false);
+          expect(validateJson(val)).toBe(false);
         });
       }
     }

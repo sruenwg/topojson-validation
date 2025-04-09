@@ -41,18 +41,10 @@ const schemaWrites = Object.entries(schemaInfos).map(([id, createSchema]) => {
   const schema = createSchema({
     definitions: new Map(),
   });
-  const kebabCaseName = convertIdToKebabCase(id);
   return Bun.write(
-    `./dist/schemas/draft-07/${kebabCaseName}.schema.json`,
+    `./dist/schemas/draft-07/${id}.json`,
     JSON.stringify(schema, null, 2),
   );
 });
 
 await Promise.all(schemaWrites);
-
-function convertIdToKebabCase(id: string) {
-  return id
-    .replaceAll(/([a-z])([A-Z])/g, '$1-$2')
-    .toLowerCase()
-    .replaceAll('topo-json', 'topojson');
-}

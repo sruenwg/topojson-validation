@@ -1,6 +1,6 @@
-import type { JsonSchemaDraft07 } from '@hyperjump/json-schema/draft-07';
+import type { Schema } from '@exodus/schemasafe';
 
-export type JsonSchema = Exclude<JsonSchemaDraft07, boolean>;
+export type JsonSchema = Exclude<Schema, boolean>;
 
 export interface SchemaContext {
   root?: string;
