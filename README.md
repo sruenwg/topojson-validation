@@ -3,9 +3,9 @@
 This repository aims to provide convenience tools for validating TopoJSON data.
 
 In this monorepo:
-- `@sruenwg/topojson-tests`: A set of valid/invalid TopoJSON test cases
-- `@sruenwg/topojson-schema`: JSON Schemas for TopoJSON
-- `@sruenwg/topojson-valibot`: Valibot schemas for TopoJSON
+- `topojson-tests`: A set of valid/invalid TopoJSON test cases
+- `topojson-schema`: JSON Schemas for TopoJSON
+- `topojson-valibot`: Valibot schemas for TopoJSON
 
 All definitions and test cases in this project are intended to reflect the [official TopoJSON specification](https://github.com/topojson/topojson-specification) as much as possible.
 Where the specification is unclear, as a general principle, this project tries to err on the side of being permissive rather than falsely flag errors.
@@ -18,7 +18,7 @@ While this project provides schemas for individual parts of the TopoJSON format 
 See individual packages for package-specific limitations.
 
 
-## To develop
+## Development
 
 This project uses [Bun workspaces](https://bun.sh/docs/install/workspaces).
 ```
