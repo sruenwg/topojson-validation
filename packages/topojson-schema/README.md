@@ -30,6 +30,33 @@ Other schemas:
 - [Transform](https://sruenwg.github.io/topojson-validation/schemas/draft-07/Transform.json)
 
 
+## Usage
+
+To use the schemas, either install the package from npm (`npm install @sruenwg/topojson-schema`) or fetch the schemas from the links above.
+Make sure your validator supports JSON Schema draft-07.
+
+For instance, using Ajv:
+```ts
+import Ajv from 'ajv';
+import { Topology as installedSchema } from '@sruenwg/topojson-schema/draft-07';
+
+const ajv = new Ajv();
+const myTopology = {
+  type: 'Topology',
+  objects: {...},
+  arcs: [...],
+};
+
+// Using schema from installed topojson-schema package
+let isTopology = ajv.validate(installedSchema, myTopology);
+
+// Using schema from URL
+const fetchedSchema = await fetch('https://sruenwg.github.io/topojson-validation/schemas/draft-07/Topology.json')
+  .then((res) => res.json());
+isTopology = ajv.validate(fetchedSchema, myTopology);
+```
+
+
 ## Limitations
 
 Some requirements of the TopoJSON specification are not fully validated by these schemas, in part due to the difficulty of performing complex validation via JSON Schema.
