@@ -8,6 +8,11 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sruenwg/topojson-validation.git",
+    "directory": "packages/topojson-schema"
+  },
   "scripts": {
     "build": "bun run ./build/generate-schemas.ts && bun run ./build/generate-exports.ts",
     "test": "vitest"

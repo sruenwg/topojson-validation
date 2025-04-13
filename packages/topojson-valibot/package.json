@@ -7,6 +7,11 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sruenwg/topojson-validation.git",
+    "directory": "packages/topojson-valibot"
+  },
   "scripts": {
     "build": "tsc",
     "test": "vitest"
