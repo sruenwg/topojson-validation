@@ -36,4 +36,4 @@ bun run test
 
 ## Acknowledgements
 
-This project was heavily inspired by the [GeoJSON Schema](https://github.com/geojson/schema) repository, with this project intially aiming to provide something of an equivalent but for the TopoJSON format.
+This project was heavily inspired by the [GeoJSON Schema](https://github.com/geojson/schema) repository, with this project initially aiming to provide something of an equivalent but for the TopoJSON format.
