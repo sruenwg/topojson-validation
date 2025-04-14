@@ -1,17 +1,18 @@
 {
   "name": "@sruenwg/topojson-valibot",
   "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sruenwg/topojson-validation.git",
+    "directory": "packages/topojson-valibot"
+  },
   "type": "module",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sruenwg/topojson-validation.git",
-    "directory": "packages/topojson-valibot"
-  },
   "scripts": {
     "build": "tsc",
     "test": "vitest"

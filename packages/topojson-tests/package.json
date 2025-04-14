@@ -1,11 +1,12 @@
 {
   "name": "@sruenwg/topojson-tests",
   "version": "0.1.0",
-  "type": "module",
-  "exports": "./index.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/sruenwg/topojson-validation.git",
     "directory": "packages/topojson-tests"
-  }
+  },
+  "type": "module",
+  "exports": "./index.js"
 }

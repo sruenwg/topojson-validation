@@ -1,6 +1,12 @@
 {
   "name": "@sruenwg/topojson-schema",
   "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sruenwg/topojson-validation.git",
+    "directory": "packages/topojson-schema"
+  },
   "type": "module",
   "exports": {
     "./draft-07": "./dist/schemas/draft-07/index.js"
@@ -8,11 +14,6 @@
   "files": [
     "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sruenwg/topojson-validation.git",
-    "directory": "packages/topojson-schema"
-  },
   "scripts": {
     "build": "bun run ./build/generate-schemas.ts && bun run ./build/generate-exports.ts",
     "test": "vitest"
